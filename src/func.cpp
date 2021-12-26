@@ -5,53 +5,42 @@
 #include "func.h"
 
 
-std::string pwdgen(int value){
-  switch(value){
-    case 1:
-      return simple_pwd();
-    case 2:
-      return medium_pwd();
-    case 3:
-      return high_pwd();
-  }
-}
-
-
-std::string simple_pwd(){
+std::string pwdgen(int length)
+{
   //password character array
-  char pwd_array[8]
+  std::string pwd_array[length];
+  std::string password;
 
-  for(int i; i = 0; i<8){
-    pwd_array[i] =
+  //Fills array with random numbers or letters
+  for(int i = 0; i <= length; i++)
+  {
+    pwd_array[i] = rand_char();
   }
+
+  //Concatinate array to string
+  for(int i = 0; i <= length; i++){
+    password += pwd_array[i];
+  }
+
+  return password;
 }
 
-char rand_char(){
-  int rand_num = rand() % 36
 
-  switch(rand_num){
-    case 0:
-      return 0;
-    case 1:
-      return 1;
-    case 2:
-      return 2;
-    case 3:
-      return 3;
-    case 4:
-      return 4;
-    case 5:
-      return 5;
-    case 6:
-      return 6;
-    case 7:
-     return 7;
-    case 8:
-      return 8;
-    case 9:
-      return 9;
-    case 10:
-      return;
+//Returns a single character string of a random letter or number
+std::string rand_char()
+{
+  int rand_num = rand() % 62;
+  std::string letter_array[52] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j",
+  "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A",
+  "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R",
+  "S", "T", "U", "V", "W", "X", "Y", "Z"};
+
+  if(rand_num > 9)
+  {
+    return std::to_string(rand_num);
   }
-
+  else
+  {
+    return letter_array[rand_num - 10];
+  }
 }

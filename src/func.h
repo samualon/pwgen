@@ -4,7 +4,7 @@
 
 //FUNCTIONS
 std::string pwdgen(int value);
-std::string simple_pwd();
+std::string rand_char();
 
 
 #endif //FUNC_H
