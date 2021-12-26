@@ -2,14 +2,15 @@
 #include <string>
 #include <stdlib.h>
 #include <time.h>
+#include <vector>
 #include "func.h"
 
 
 std::string pwdgen(int length)
 {
   //password character array
-  std::string pwd_array[length];
-  std::string password;
+  std::vector<std::string> pwd_array(length);
+  std::string password = "";
 
   //Fills array with random numbers or letters
   for(int i = 0; i < length; i++)

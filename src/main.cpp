@@ -10,7 +10,6 @@ int main(){
   int length;
   std::string generated_pwd;
 
-
   //Seed initiation
   srand(time(NULL));
 
