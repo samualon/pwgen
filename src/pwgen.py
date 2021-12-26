@@ -11,7 +11,8 @@ window.title("PWGen");
 window.configure(background="#262626")
 
 #Labels setup
-Label(window, text="Enter site url: ", bg="#006db0", fg="white", font=my_font).grid(row=0, column=0, sticky=W);
-
+label1 = Label(window, text="Enter site url: ", bg="#006db0", fg="white", font=my_font);
+label1.pack(padx=5, pady=5);
+label1.grid(row=0, column=0);
 
 window.mainloop();
