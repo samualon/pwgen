@@ -20,7 +20,8 @@ int main(){
   generated_pwd = pwdgen(length);
 
   std::cout<<std::endl;
-  std::cout<<"Your generated password is: " + generated_pwd;
+  std::cout<<"Your generated password is: " + generated_pwd<<std::endl;
+  std::cout<<"Enter anything to quit... ";
 
   //Prevent prompt from closing
   std::cin>>length;
