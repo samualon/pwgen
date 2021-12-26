@@ -6,7 +6,7 @@
 
 
 int main(){
-  //VARIABLES
+  //Variables
   int length;
   std::string generated_pwd;
 
