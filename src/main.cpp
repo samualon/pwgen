@@ -30,9 +30,6 @@ int main(){
   runtime_file_write << generated_pwd;
   runtime_file_write.close();
 
-  std::cout<<length<<std::endl<<generated_pwd;
-  std::cin>>length;
-
 
   return 0;
 }
