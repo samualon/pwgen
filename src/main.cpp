@@ -5,7 +5,6 @@
 #include "func.h"
 
 
-
 int main(){
   //VARIABLES
   int length;
@@ -24,7 +23,7 @@ int main(){
   std::cout<<std::endl;
   std::cout<<"Your generated password is: " + generated_pwd;
 
-  //Prevent prompt of closing
+  //Prevent prompt from closing
   std::cin>>length;
 
 

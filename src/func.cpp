@@ -12,13 +12,13 @@ std::string pwdgen(int length)
   std::string password;
 
   //Fills array with random numbers or letters
-  for(int i = 0; i <= length; i++)
+  for(int i = 0; i < length; i++)
   {
     pwd_array[i] = rand_char();
   }
 
   //Concatinate array to string
-  for(int i = 0; i <= length; i++){
+  for(int i = 0; i < length; i++){
     password += pwd_array[i];
   }
 

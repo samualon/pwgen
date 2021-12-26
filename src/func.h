@@ -3,7 +3,7 @@
 
 
 //FUNCTIONS
-std::string pwdgen(int value);
+std::string pwdgen(int length);
 std::string rand_char();
 
 
