@@ -27,6 +27,9 @@ def generate_click():
 
     password_label.config(text="Generated pass: " + password);
 
+    user_data = open('../data/user_saves.data', 'a+');
+    user_data.write("- " + "\n" + user_site + "\n" + user_email + "\n" + password + "\n" + "\n");
+    user_data.close();
 
 def overview_click():
     return 0;
