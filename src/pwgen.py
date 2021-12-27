@@ -28,11 +28,38 @@ def generate_click():
     password_label.config(text="Generated pass: " + password);
 
     user_data = open('../data/user_saves.data', 'a+');
-    user_data.write("- " + "\n" + user_site + "\n" + user_email + "\n" + password + "\n" + "\n");
+    user_data.write("1) " + "\n" + user_site + "\n" + "2) \n" + user_email + "\n" + "3) \n" + password + "\n" + "\n");
     user_data.close();
 
+
 def overview_click():
-    return 0;
+    filled = 0;
+    sites = [];
+    usernames = [];
+    passwords = [];
+
+    overview_window = Toplevel(window);
+    overview_window.title("Overview");
+
+    user_data = open('../data/user_saves.data', 'r+');
+
+    while filled = 0:
+        if user_data.readline() = "1) ":
+            sites.append(user_data.readline());
+        elif user_data.readline() = "2) ":
+            usernames.append(user_data.readline());
+        elif user_data.readline() = "3) ":
+            passwords = user_data.readline();
+        else:
+            filled = 1;
+
+
+    user_data.close();
+
+    print(sites);
+    print(usernames);
+    print(passwords);
+
 
 
 #Etc
