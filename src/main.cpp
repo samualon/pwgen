@@ -18,7 +18,7 @@ int main(){
   srand(time(NULL));
 
   //Main code
-  runtime_file_read.open("../runtime/runtime.data");
+  runtime_file_read.open("../etc/runtime.data");
   std::getline(runtime_file_read, file_line);
   runtime_file_read.close();
   length = atoi(file_line.c_str());
@@ -26,10 +26,9 @@ int main(){
   generated_pwd = pwdgen(length);
 
   //Write password to file
-  runtime_file_write.open("../runtime/runtime.data", std::ios::trunc);
+  runtime_file_write.open("../etc/runtime.data", std::ios::trunc);
   runtime_file_write << generated_pwd;
   runtime_file_write.close();
-
 
   return 0;
 }
